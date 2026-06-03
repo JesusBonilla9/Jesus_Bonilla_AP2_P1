@@ -6,5 +6,5 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "borrame")
 data class BorrameEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0
+    val borrameId: Int = 0
 )

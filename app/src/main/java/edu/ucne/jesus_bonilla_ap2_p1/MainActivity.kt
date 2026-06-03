@@ -12,9 +12,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Jesus_Bonilla_AP2_P1Theme {
-                }
+
             }
         }
     }
-
-
+}
