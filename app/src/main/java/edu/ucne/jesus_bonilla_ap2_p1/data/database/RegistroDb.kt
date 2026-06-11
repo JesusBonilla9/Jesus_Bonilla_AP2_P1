@@ -2,13 +2,13 @@ package edu.ucne.jesus_bonilla_ap2_p1.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import edu.ucne.jesus_bonilla_ap2_p1.data.borrame.local.BorrameDao
-import edu.ucne.jesus_bonilla_ap2_p1.data.borrame.local.BorrameEntity
+import edu.ucne.jesus_bonilla_ap2_p1.data.amonestaciones.local.AmonestacionDao
+import edu.ucne.jesus_bonilla_ap2_p1.data.amonestaciones.local.AmonestacionEntity
 
 @Database(
-    entities = [BorrameEntity:: class],
-    version = 1
+    entities = [AmonestacionEntity:: class],
+    version = 2
 )
 abstract class RegistroDb: RoomDatabase(){
-    abstract fun BorrameDao(): BorrameDao
+    abstract fun AmonestacionDao(): AmonestacionDao
 }

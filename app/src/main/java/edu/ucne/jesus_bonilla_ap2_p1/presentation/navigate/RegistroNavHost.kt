@@ -8,8 +8,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import edu.ucne.jesus_bonilla_ap2_p1.presentation.edit.EditBorrameScreen
-import edu.ucne.jesus_bonilla_ap2_p1.presentation.list.BorrameListScreen
+import edu.ucne.jesus_bonilla_ap2_p1.presentation.edit.EditAmonestacionScreen
+import edu.ucne.jesus_bonilla_ap2_p1.presentation.list.AmonestacionListScreen
 
 @Composable
 fun RegistroNavHost(
@@ -18,26 +18,26 @@ fun RegistroNavHost(
 ){
     NavHost(
         navController = navController,
-        startDestination = Screen.BorrameList,
+        startDestination = Screen.AmonestacionList,
         modifier = Modifier.padding(innerPadding)
 
     ){
-        composable<Screen.BorrameList> {
-            BorrameListScreen(
-                onAddBorrame = {
-                    navController.navigate(Screen.BorrameEdit(0))
+        composable<Screen.AmonestacionList> {
+            AmonestacionListScreen(
+                onAddAmonestacion = {
+                    navController.navigate(Screen.AmonestacionEdit(0))
                 },
                 onNavigateToEdit = { id ->
-                    navController.navigate(Screen.BorrameEdit(id))
+                    navController.navigate(Screen.AmonestacionEdit(id))
                 }
             )
         }
 
-        composable<Screen.BorrameEdit> {
-            EditBorrameScreen(
+        composable<Screen.AmonestacionEdit> {
+            EditAmonestacionScreen(
                 onBack = {
-                    navController.navigate(Screen.BorrameList) {
-                        popUpTo(Screen.BorrameList) {
+                    navController.navigate(Screen.AmonestacionList) {
+                        popUpTo(Screen.AmonestacionList) {
                             inclusive = true
                         }
                     }
